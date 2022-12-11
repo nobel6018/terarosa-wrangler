@@ -1,0 +1,8 @@
+name = "terarosa-notion"
+type = "javascript"
+
+account_id = "327bf888743064ef2493d98140f02f3b"
+workers_dev = true
+route = "terarosa.me/*"
+zone_id = "70b07fd95441f54325a5d14d5b3467b8"
+compatibility_date = "2022-12-11"
