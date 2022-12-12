@@ -19,7 +19,11 @@ const PAGE_DESCRIPTION = '';
 /* Step 4: enter a Google Font name, you can choose from https://fonts.google.com */
 const GOOGLE_FONT = '';
 
-/* Step 5: enter any custom scripts you'd like */
+/* Step 5: enter Google Analytics 4 Tracking ID */
+// ref: https://support.google.com/analytics/answer/9539598
+const GA_TRACKING_ID = 'G-7XD50EPP3J';
+
+/* Step 6: enter any custom scripts you'd like */
 const CUSTOM_SCRIPT = ``;
 
 /* CONFIGURATION ENDS HERE */
@@ -276,7 +280,16 @@ class BodyRewriter {
         arguments[1] = arguments[1].replace('${MY_DOMAIN}', 'www.notion.so');
         return open.apply(this, [].slice.call(arguments));
       };
-    </script>${CUSTOM_SCRIPT}`, {
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', '${GA_TRACKING_ID}');
+    </script>
+    ${CUSTOM_SCRIPT}`, {
       html: true
     });
   }
