@@ -9,7 +9,7 @@ const MY_DOMAIN = 'terarosa.me';
  * The value on the right is the Notion page ID
  */
 const SLUG_TO_PAGE = {
-  '': 'f81be2845c0042b79cc1be0bf29d195a',
+  '': '89778de375624d0c81e4e45b3063a958',
 };
 
 /* Step 3: enter your page title and description for SEO purposes */
